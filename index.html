@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello, World! - A-Frame</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-sky color="#000000"></a-sky>
+    </a-scene>
+    <script>
+        var skyColor = document.querySelector("a-sky").attributes.color.value;
+        document.addEventListener("mousedown", function (event) {
+            document.querySelector("a-sky").attributes.color.value = "#00FFFF"
+        });
+        document.addEventListener("mouseup", function (event) {
+            document.querySelector("a-sky").attributes.color.value = "#000000"
+        });
+
+    </script>
+</body>
+
+</html>
